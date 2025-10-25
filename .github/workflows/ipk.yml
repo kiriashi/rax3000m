@@ -335,7 +335,7 @@ jobs:
         CONFIG_PACKAGE_luci-app-homeproxy=m
         CONFIG_PACKAGE_luci-app-nikki=m
         CONFIG_PACKAGE_luci-app-openclash=m
-        CONFIG_PACKAGE_luci-theme-material3=y
+        CONFIG_PACKAGE_luci-theme-material3=m
         CONFIG_PACKAGE_luci-app-quickstart=m
         CONFIG_PACKAGE_luci-app-argon-config=m
         CONFIG_PACKAGE_luci-theme-argon=m
@@ -345,6 +345,32 @@ jobs:
         CONFIG_PACKAGE_luci-app-eqosplus=m
         CONFIG_PACKAGE_luci-app-turboacc=m
         CONFIG_PACKAGE_luci-app-quickfile=m
+        ### Custom
+        CONFIG_PACKAGE_luci-app-leigod-acc=m
+        CONFIG_PACKAGE_luci-app-watchcat=m 
+        CONFIG_PACKAGE_qrencode=m
+        CONFIG_PACKAGE_libqrencode=m
+        CONFIG_PACKAGE_ipset=m
+        CONFIG_PACKAGE_libpcap=m
+        CONFIG_PACKAGE_libipset=m
+        CONFIG_PACKAGE_tc-full=m
+        CONFIG_PACKAGE_kmod-netem=m
+        CONFIG_PACKAGE_conntrack=m
+        CONFIG_PACKAGE_conntrackd=m
+        CONFIG_PACKAGE_cfdisk=m
+        CONFIG_PACKAGE_jq=m
+        CONFIG_PACKAGE_docker-compose=m
+        CONFIG_PACKAGE_luci-app-ramfree=m
+        CONFIG_PACKAGE_luci-app-turboacc=m
+        CONFIG_PACKAGE_luci-app-upnp=m
+        CONFIG_PACKAGE_miniupnpd-nftables=m
+        ### Qmodem
+        CONFIG_PACKAGE_qmodem=m
+        CONFIG_PACKAGE_luci-app-qmodem=m
+        CONFIG_PACKAGE_luci-app-qmodem_INCLUDE_vendor-qmi-wwan=m
+        CONFIG_PACKAGE_luci-app-qmodem_USE_TOM_CUSTOMIZED_QUECTEL_CM=m
+        CONFIG_PACKAGE_luci-app-qmodem-sms=m
+        CONFIG_PACKAGE_luci-app-qmodem-ttl=m
         ##sfe
         CONFIG_PACKAGE_kmod-fast-classifier=y
         CONFIG_PACKAGE_kmod-shortcut-fe=y
@@ -402,5 +428,5 @@ jobs:
         git add .
         git commit -m "${{ env.tag }}"
         git branch -M main
-        git remote add origin https://github-action:$GITHUB_TOKEN@github.com/shiyu1314/rax3000m
+        git remote add origin https://github-action:$GITHUB_TOKEN@github.com/kiriashi/ipk
         git push -u origin main --force
