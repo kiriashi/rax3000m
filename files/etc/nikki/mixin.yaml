@@ -1,0 +1,482 @@
+nikki-proxy-groups:
+  # 主选择组
+  - name: "🌊 海外"
+    type: "select"
+    proxies:
+      - "🎯 自动"
+      - "🕹 手动"
+      - "DIRECT"
+    url: "http://www.gstatic.com/generate_204"
+  
+  - name: "🧱 墙内"
+    type: "select"
+    proxies:
+      - "DIRECT"
+      - "REJECT"
+      - "🌊 海外"
+    url: "http://www.gstatic.com/generate_204"
+  
+  # 自动/手动
+  - name: "🎯 自动"
+    type: "select"
+    proxies:
+      - "🎯🇭🇰 香港"
+      - "🎯🇹🇼 台湾"
+      - "🎯🇸🇬 狮城"
+      - "🎯🇯🇵 日本"
+      - "🎯🇺🇸 美国"
+      - "🎯🌏 亚太"
+      - "🎯🌍 欧美"
+      - "🎯🌐 全球"
+    url: "http://www.gstatic.com/generate_204"
+  
+  - name: "🕹 手动"
+    type: "select"
+    url: "http://www.gstatic.com/generate_204"
+    disable-udp: false
+    hidden: false
+    include-all: true
+    filter: '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|以下|移动|联通|电信|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|回国|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|CN)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+  
+  # 应用分组
+  - name: "🎬 媒体"
+    type: "select"
+    proxies:
+      - "🎯 自动"
+      - "🕹 手动"
+      - "🎯🇭🇰 香港"
+      - "🎯🇹🇼 台湾"
+      - "🎯🇸🇬 狮城"
+      - "🎯🇺🇸 美国"
+      - "🎯🇯🇵 日本"
+  
+  - name: "🎮 游戏"
+    type: "select"
+    proxies:
+      - "🧱 墙内"
+      - "🕹 手动"
+      - "🎯🇭🇰 香港"
+      - "🎯🇹🇼 台湾"
+      - "🎯🇸🇬 狮城"
+      - "🎯🇺🇸 美国"
+      - "🎯🇯🇵 日本"
+  
+  - name: "✈️ 电报"
+    type: "select"
+    proxies:
+      - "🎯 自动"
+      - "🕹 手动"
+      - "🎯🇭🇰 香港"
+      - "🎯🇹🇼 台湾"
+      - "🎯🇸🇬 狮城"
+      - "🎯🇺🇸 美国"
+      - "🎯🇯🇵 日本"
+  
+  - name: "🤖 AI"
+    type: "select"
+    proxies:
+      - "🎯 自动"
+      - "🕹 手动"
+      - "🎯🇭🇰 香港"
+      - "🎯🇹🇼 台湾"
+      - "🎯🇸🇬 狮城"
+      - "🎯🇺🇸 美国"
+      - "🎯🇯🇵 日本"
+  
+  - name: "🍎 苹果"
+    type: "select"
+    proxies:
+      - "🧱 墙内"
+      - "🎯🇺🇸 美国"
+      - "🎯🇯🇵 日本"
+  
+  - name: "🇬 谷歌"
+    type: "select"
+    proxies:
+      - "🎯🇺🇸 美国"
+      - "🧱 墙内"
+      - "🎯🇸🇬 狮城"
+  
+  - name: "Ⓜ️ 微软"
+    type: "select"
+    proxies:
+      - "🧱 墙内"
+      - "🎯🇺🇸 美国"
+      - "🎯🇯🇵 日本"
+  
+  - name: "💩 广告"
+    type: "select"
+    proxies:
+      - "REJECT"
+      - "🧱 墙内"
+      - "🌊 海外"
+  
+  # 智能选择
+  - name: "🎯🇭🇰 香港"
+    type: "select"
+    proxies:
+      - "🚀🇭🇰 最低延迟"
+      - "♻️🇭🇰 自动回退"
+      - "⚖️🇭🇰 负载均衡"
+  
+  - name: "🎯🇹🇼 台湾"
+    type: "select"
+    proxies:
+      - "🚀🇹🇼 最低延迟"
+      - "♻️🇹🇼 自动回退"
+      - "⚖️🇹🇼 负载均衡"
+  
+  - name: "🎯🇸🇬 狮城"
+    type: "select"
+    proxies:
+      - "🚀🇸🇬 最低延迟"
+      - "♻️🇸🇬 自动回退"
+      - "⚖️🇸🇬 负载均衡"
+  
+  - name: "🎯🇯🇵 日本"
+    type: "select"
+    proxies:
+      - "🚀🇯🇵 最低延迟"
+      - "♻️🇯🇵 自动回退"
+      - "⚖️🇯🇵 负载均衡"
+  
+  - name: "🎯🇺🇸 美国"
+    type: "select"
+    proxies:
+      - "🚀🇺🇸 最低延迟"
+      - "♻️🇺🇸 自动回退"
+      - "⚖️🇺🇸 负载均衡"
+  
+  - name: "🎯🌏 亚太"
+    type: "select"
+    proxies:
+      - "🚀🌏 最低延迟"
+      - "♻️🌏 自动回退"
+      - "⚖️🌏 负载均衡"
+  
+  - name: "🎯🌍 欧美"
+    type: "select"
+    proxies:
+      - "🚀🌍 最低延迟"
+      - "♻️🌍 自动回退"
+      - "⚖️🌍 负载均衡"
+  
+  - name: "🎯🌐 全球"
+    type: "select"
+    proxies:
+      - "🚀🌐 最低延迟"
+      - "♻️🌐 自动回退"
+      - "⚖️🌐 负载均衡"
+
+  # 最低延迟 - 按地区
+  - name: "🚀🇭🇰 最低延迟"
+    type: "url-test"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    tolerance: 50
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)香港|HK|Hong"
+
+  - name: "🚀🇹🇼 最低延迟"
+    type: "url-test"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    tolerance: 50
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)台湾|TW|Tai|Taiwan"
+
+  - name: "🚀🇸🇬 最低延迟"
+    type: "url-test"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    tolerance: 50
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)新加坡|狮|SG|Singapore"
+
+  - name: "🚀🇯🇵 最低延迟"
+    type: "url-test"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    tolerance: 50
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)日本|川日|东京|大阪|泉日|埼玉|JP|Japan"
+
+  - name: "🚀🇺🇸 最低延迟"
+    type: "url-test"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    tolerance: 50
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States"
+
+  - name: "🚀🌏 最低延迟"
+    type: "url-test"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    tolerance: 50
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)香港|台湾|日本|新加坡|澳大利亚|新西兰|泰国|马来|韩国|首尔|迪拜|HK|TW|Taiwan|JP|Japan|SG|Singapore|AU|Australia|NZ|NewZealand|TH|Thailand|MY|Malaysia|KR|Korea|Seoul|AE|Dubai"
+
+  - name: "🚀🌍 最低延迟"
+    type: "url-test"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    tolerance: 50
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)美国|加拿大|墨西哥|英国|德国|法兰克福|法国|巴黎|芬兰|阿根廷|瑞士|苏黎世|圣保罗|土耳其|US|United States|CA|Canada|UK|GB|Germany|DE|France|FR|EU|EUROPE|FI|Finland|AR|Argentina|CH|Switzerland|SaoPaulo|BR|SP|TR|Turkey"
+
+  - name: "🚀🌐 最低延迟"
+    type: "url-test"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    tolerance: 50
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|以下|移动|联通|电信|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|回国|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|CN)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+
+  # 自动回退 - 按地区
+  - name: "♻️🇭🇰 自动回退"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)香港|HK|Hong"
+
+  - name: "♻️🇹🇼 自动回退"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)台湾|TW|Tai|Taiwan"
+
+  - name: "♻️🇸🇬 自动回退"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)新加坡|狮|SG|Singapore"
+
+  - name: "♻️🇯🇵 自动回退"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)日本|川日|东京|大阪|泉日|埼玉|JP|Japan"
+
+  - name: "♻️🇺🇸 自动回退"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States"
+
+  - name: "♻️🌏 自动回退"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)香港|台湾|日本|新加坡|澳大利亚|新西兰|泰国|马来|韩国|首尔|迪拜|HK|TW|Taiwan|JP|Japan|SG|Singapore|AU|Australia|NZ|NewZealand|TH|Thailand|MY|Malaysia|KR|Korea|Seoul|AE|Dubai"
+
+  - name: "♻️🌍 自动回退"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)美国|加拿大|墨西哥|英国|德国|法兰克福|法国|巴黎|芬兰|阿根廷|瑞士|苏黎世|圣保罗|土耳其|US|United States|CA|Canada|UK|GB|Germany|DE|France|FR|EU|EUROPE|FI|Finland|AR|Argentina|CH|Switzerland|SaoPaulo|BR|SP|TR|Turkey"
+
+  - name: "♻️🌐 自动回退"
+    type: "fallback"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    timeout: 3000
+    disable-udp: false
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|以下|移动|联通|电信|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|回国|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|CN)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+
+  # 负载均衡 - 按地区
+  - name: "⚖️🇭🇰 负载均衡"
+    type: "load-balance"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    disable-udp: false
+    strategy: "consistent-hashing"
+    timeout: 3000
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)香港|HK|Hong"
+
+  - name: "⚖️🇹🇼 负载均衡"
+    type: "load-balance"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    disable-udp: false
+    strategy: "consistent-hashing"
+    timeout: 3000
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)台湾|TW|Tai|Taiwan"
+
+  - name: "⚖️🇸🇬 负载均衡"
+    type: "load-balance"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    disable-udp: false
+    strategy: "consistent-hashing"
+    timeout: 3000
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)新加坡|狮|SG|Singapore"
+
+  - name: "⚖️🇯🇵 负载均衡"
+    type: "load-balance"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    disable-udp: false
+    strategy: "consistent-hashing"
+    timeout: 3000
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)日本|川日|东京|大阪|泉日|埼玉|JP|Japan"
+
+  - name: "⚖️🇺🇸 负载均衡"
+    type: "load-balance"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    disable-udp: false
+    strategy: "consistent-hashing"
+    timeout: 3000
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States"
+
+  - name: "⚖️🌏 负载均衡"
+    type: "load-balance"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    disable-udp: false
+    strategy: "consistent-hashing"
+    timeout: 3000
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)香港|台湾|日本|新加坡|澳大利亚|新西兰|泰国|马来|韩国|首尔|迪拜|HK|TW|Taiwan|JP|Japan|SG|Singapore|AU|Australia|NZ|NewZealand|TH|Thailand|MY|Malaysia|KR|Korea|Seoul|AE|Dubai"
+
+  - name: "⚖️🌍 负载均衡"
+    type: "load-balance"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    disable-udp: false
+    strategy: "consistent-hashing"
+    timeout: 3000
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: "(?i)美国|加拿大|墨西哥|英国|德国|法兰克福|法国|巴黎|芬兰|阿根廷|瑞士|苏黎世|圣保罗|土耳其|US|United States|CA|Canada|UK|GB|Germany|DE|France|FR|EU|EUROPE|FI|Finland|AR|Argentina|CH|Switzerland|SaoPaulo|BR|SP|TR|Turkey"
+
+  - name: "⚖️🌐 负载均衡"
+    type: "load-balance"
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    disable-udp: false
+    strategy: "consistent-hashing"
+    timeout: 3000
+    max-failed-times: 3
+    hidden: true
+    include-all: true
+    filter: '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|以下|移动|联通|电信|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|回国|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|CN)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+
+  # 兜底策略
+  - name: "🐟 漏网之鱼"
+    type: "select"
+    proxies: ["🧱 墙内", "🌊 海外", "REJECT"]
+    url: "http://www.gstatic.com/generate_204"

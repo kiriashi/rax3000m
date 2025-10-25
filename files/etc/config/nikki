@@ -1,0 +1,432 @@
+
+config status 'status'
+
+config config 'config'
+	option enabled '0'
+	option start_delay '180'
+	option scheduled_restart '0'
+	option cron_expression '0 3 * * *'
+	option test_profile '1'
+	option fast_reload '1'
+	option core_only '0'
+
+config subscription
+	option name 'sub-store'
+	option url 'http://127.0.0.1:3001/OfYj5LV9jRec9oKRwAOp/download/collection/all?target=ClashMeta'
+	option user_agent 'clash'
+	option prefer 'remote'
+	option success '0'
+
+config proxy 'proxy'
+	option enabled '1'
+	option tcp_mode 'redirect'
+	option ipv4_dns_hijack '1'
+	option ipv6_dns_hijack '1'
+	option ipv4_proxy '1'
+	option ipv6_proxy '1'
+	option fake_ip_ping_hijack '1'
+	option router_proxy '1'
+	option lan_proxy '1'
+	option bypass_china_mainland_ip '1'
+	option proxy_tcp_dport '0-65535'
+	option proxy_udp_dport '0-65535'
+	option tun_timeout '30'
+	option tun_interval '1'
+	list reserved_ip '0.0.0.0/8'
+	list reserved_ip '10.0.0.0/8'
+	list reserved_ip '127.0.0.0/8'
+	list reserved_ip '100.64.0.0/10'
+	list reserved_ip '169.254.0.0/16'
+	list reserved_ip '172.16.0.0/12'
+	list reserved_ip '192.168.0.0/16'
+	list reserved_ip '224.0.0.0/4'
+	list reserved_ip '240.0.0.0/4'
+	list reserved_ip6 '::/128'
+	list reserved_ip6 '::1/128'
+	list reserved_ip6 '::ffff:0:0/96'
+	list reserved_ip6 '100::/64'
+	list reserved_ip6 '64:ff9b::/96'
+	list reserved_ip6 '2001::/32'
+	list reserved_ip6 '2001:10::/28'
+	list reserved_ip6 '2001:20::/28'
+	list reserved_ip6 '2001:db8::/32'
+	list reserved_ip6 '2002::/16'
+	list reserved_ip6 'fc00::/7'
+	list reserved_ip6 'fe80::/10'
+	list reserved_ip6 'ff00::/8'
+	list bypass_dscp '4'
+	list lan_inbound_interface 'lan'
+	option udp_mode 'tun'
+
+config mixin 'mixin'
+	option log_level 'warning'
+	option mode 'rule'
+	option match_process 'off'
+	option ipv6 '1'
+	option ui_url 'https://gh-proxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip'
+	option api_listen '[::]:9090'
+	option selection_cache '1'
+	option allow_lan '1'
+	option http_port '8080'
+	option socks_port '1080'
+	option mixed_port '7890'
+	option redir_port '7891'
+	option tproxy_port '7892'
+	option authentication '1'
+	option tun_device 'nikki'
+	option tun_stack 'system'
+	option tun_dns_hijack '1'
+	list tun_dns_hijacks 'tcp://any:53'
+	list tun_dns_hijacks 'udp://any:53'
+	option dns_listen '[::]:1053'
+	option dns_ipv6 '1'
+	option dns_mode 'fake-ip'
+	option fake_ip_range '198.18.0.1/16'
+	option fake_ip_filter '1'
+	option fake_ip_cache '1'
+	option hosts '0'
+	option dns_nameserver '1'
+	option dns_nameserver_policy '1'
+	option sniffer_force_domain_name '1'
+	option sniffer_ignore_domain_name '1'
+	option sniffer_sniff '1'
+	option rule '1'
+	option rule_provider '1'
+	option mixin_file_content '1'
+	option ui_path 'ui'
+	option tcp_concurrent '1'
+	option tcp_keep_alive_idle '600'
+	option tcp_keep_alive_interval '15'
+	option tun_gso '1'
+	option fake_ip_filter_mode 'blacklist'
+	option dns_respect_rules '1'
+	option sniffer '1'
+	option sniffer_sniff_dns_mapping '1'
+	option sniffer_sniff_pure_ip '1'
+	option geoip_format 'dat'
+	option geodata_loader 'standard'
+	option geosite_url 'https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-geodata/geosite-all.dat'
+	option geoip_mmdb_url 'https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-geodata/Country.mmdb'
+	option geoip_dat_url 'https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-geodata/geoip.dat'
+	option geoip_asn_url 'https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-geodata/Country-ASN-all.mmdb'
+	option geox_auto_update '1'
+	option geox_update_interval '24'
+	option tun_enabled '1'
+	option dns_enabled '1'
+	option unify_delay '1'
+	option dns_system_hosts '1'
+	option dns_hosts '1'
+	option tun_mtu '1500'
+	option dns_doh_prefer_http3 '1'
+	list sniffer_force_domain_names '+.netflix.com'
+	list sniffer_force_domain_names '+.nflxvideo.net'
+	list sniffer_force_domain_names '+.amazonaws.com'
+	list sniffer_force_domain_names '+.media.dssott.com'
+	list sniffer_ignore_domain_names '+.apple.com'
+	list sniffer_ignore_domain_names 'Mijia Cloud'
+	list sniffer_ignore_domain_names 'dlg.io.mi.com'
+	list sniffer_ignore_domain_names '+.oray.com'
+	list sniffer_ignore_domain_names '+.sunlogin.net'
+	list sniffer_ignore_domain_names '+.push.apple.com'
+	option global_client_fingerprint 'chrome'
+	option api_secret 'nikki'
+	list fake_ip_filters '+.lan'
+	list fake_ip_filters '+.local'
+	list fake_ip_filters 'geosite:fakeip-filter'
+	list fake_ip_filters 'geosite:cn'
+	list fake_ip_filters 'geosite:private'
+	list fake_ip_filters 'geosite:games-cn'
+	list fake_ip_filters 'geosite:trackerslist'
+	option tun_gso_max_size '65536'
+
+config authentication
+	option enabled '0'
+	option username 'nikki'
+	option password 'openwrt'
+
+config env 'env'
+	option disable_loopback_detector '0'
+	option disable_quic_go_gso '1'
+	option disable_quic_go_ecn '0'
+	option skip_system_ipv6_check '0'
+
+config router_access_control
+	option enabled '1'
+	option proxy '0'
+	option dns '0'
+	list user 'dnsmasq'
+	list user 'ftp'
+	list user 'logd'
+	list user 'nobody'
+	list user 'ntp'
+	list user 'ubus'
+	list user 'docker'
+	list group 'dnsmasq'
+	list group 'ftp'
+	list group 'logd'
+	list group 'nogroup'
+	list group 'ntp'
+	list group 'ubus'
+	list group 'docker'
+	list cgroup 'services/adguardhome'
+	list cgroup 'services/aria2'
+	list cgroup 'services/dnsmasq'
+	list cgroup 'services/netbird'
+	list cgroup 'services/qbittorrent'
+	list cgroup 'services/sysntpd'
+	list cgroup 'services/tailscale'
+	list cgroup 'services/zerotier'
+
+config router_access_control
+	option enabled '1'
+	option dns '1'
+	option proxy '1'
+
+config lan_access_control
+	option enabled '1'
+	option proxy '1'
+	option dns '1'
+
+config hosts
+	option enabled '0'
+	option domain_name 'localhost'
+	list ip '127.0.0.1'
+	list ip '::1'
+
+config nameserver
+	option enabled '1'
+	option type 'default-nameserver'
+	list nameserver '223.5.5.5'
+	list nameserver '119.29.29.29'
+	list nameserver '[2400:3200::1]'
+	list nameserver '[2402:4e00::]'
+
+config nameserver
+	option enabled '1'
+	option type 'proxy-server-nameserver'
+	list nameserver 'https://doh.pub/dns-query'
+
+config nameserver_policy
+	option enabled '1'
+	option matcher 'geosite:private,cn,games-cn,trackerslist'
+	list nameserver 'https://doh.pub/dns-query'
+	list nameserver 'https://dns.alidns.com/dns-query'
+
+config nameserver_policy
+	option enabled '1'
+	option matcher 'geosite:!private,!cn,!games-cn,!trackerslist'
+	list nameserver 'tls://dns.google'
+	list nameserver 'tls://cloudflare-dns.com'
+
+config sniff
+	option enabled '1'
+	option protocol 'HTTP'
+	option overwrite_destination '1'
+	list port '80'
+	list port '8080-8880'
+
+config sniff
+	option enabled '1'
+	option protocol 'TLS'
+	list port '443'
+	list port '8443'
+	option overwrite_destination '0'
+
+config sniff
+	option enabled '1'
+	option protocol 'QUIC'
+	list port '443'
+	list port '8443'
+	option overwrite_destination '0'
+
+config editor 'editor'
+
+config log 'log'
+
+config routing 'routing'
+	option tproxy_fw_mark '0x80'
+	option tun_fw_mark '0x81'
+	option tproxy_rule_pref '1024'
+	option tun_rule_pref '1025'
+	option tproxy_route_table '80'
+	option tun_route_table '81'
+	option cgroup_id '0x12061206'
+	option cgroup_name 'nikki'
+
+config nameserver
+	option enabled '1'
+	option type 'nameserver'
+	list nameserver 'tls://8.8.4.4#dns'
+	list nameserver 'tls://1.0.0.1#dns'
+	list nameserver 'tls://[2001:4860:4860::8844]#dns'
+	list nameserver 'tls://[2606:4700:4700::1001]#dns'
+
+config rule_provider
+	option name 'custom_domestic'
+	option type 'http'
+	option url 'https://gh-proxy.com/https://raw.githubusercontent.com/kiriashi/static/main/clash/custom_domestic.txt'
+	option node 'DIRECT'
+	option file_size_limit '0'
+	option file_format 'text'
+	option behavior 'classical'
+	option update_interval '86400'
+	option enabled '1'
+
+config rule_provider
+	option name 'custom_proxy'
+	option type 'http'
+	option url 'https://gh-proxy.com/https://raw.githubusercontent.com/kiriashi/static/main/clash/custom_proxy.txt'
+	option node 'DIRECT'
+	option file_size_limit '0'
+	option file_format 'text'
+	option behavior 'classical'
+	option update_interval '86400'
+	option enabled '1'
+
+config rule_provider
+	option name 'game_platform'
+	option type 'http'
+	option url 'https://gh-proxy.com/https://raw.githubusercontent.com/kiriashi/static/main/clash/game_platform.txt'
+	option node 'DIRECT'
+	option file_size_limit '0'
+	option file_format 'text'
+	option behavior 'classical'
+	option update_interval '86400'
+	option enabled '1'
+
+config rule
+	option enabled '1'
+	option type 'RULE-SET'
+	option matcher 'custom_domestic'
+	option node '🧱 墙内'
+
+config rule
+	option enabled '1'
+	option type 'RULE-SET'
+	option matcher 'custom_proxy'
+	option node '🌊 海外'
+
+config rule
+	option enabled '1'
+	option type 'RULE-SET'
+	option matcher 'game_platform'
+	option node '🌊 海外'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option node '💩 广告'
+	option matcher 'ads'
+
+config rule
+	option enabled '1'
+	option type 'GEOIP'
+	option matcher 'telegram'
+	option node '✈️ 电报'
+	option no_resolve '1'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'ai'
+	option node '🤖 AI'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'media'
+	option node '🎬 媒体'
+
+config rule
+	option enabled '1'
+	option type 'GEOIP'
+	option matcher 'media'
+	option node '🎬 媒体'
+	option no_resolve '0'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'games'
+	option node '🎮 游戏'
+
+config rule
+	option enabled '1'
+	option type 'GEOIP'
+	option matcher 'games'
+	option node '🎮 游戏'
+	option no_resolve '0'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'google-cn'
+	option node '🇬 谷歌'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'microsoft-cn'
+	option node 'Ⓜ️ 微软'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'apple-cn'
+	option node '🍎 苹果'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'cn'
+	option node '🧱 墙内'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'private'
+	option node '🧱 墙内'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'games-cn'
+	option node '🧱 墙内'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'trackerslist'
+	option node '🧱 墙内'
+
+config rule
+	option enabled '1'
+	option type 'GEOIP'
+	option matcher 'cn'
+	option node '🧱 墙内'
+	option no_resolve '0'
+
+config rule
+	option enabled '1'
+	option type 'GEOIP'
+	option matcher 'private'
+	option node '🧱 墙内'
+	option no_resolve '1'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'proxy'
+	option node '🌊 海外'
+
+config rule
+	option enabled '1'
+	option type 'GEOSITE'
+	option matcher 'tld-proxy'
+	option node '🌊 海外'
+
+config rule
+	option enabled '1'
+	option type 'MATCH'
+	option node '🐟 漏网之鱼'
+
