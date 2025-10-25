@@ -131,6 +131,7 @@ jobs:
           [ -e patch ] && cp -rf patch/default-settings $SOURCE_NAME/package/emortal
         fi
         cd $SOURCE_NAME
+        mkdir -p staging_dir
         find ./staging_dir/ -name '*' -exec touch {} \; >/dev/null 2>&1
         ./scripts/feeds update -a
         cd .. 
